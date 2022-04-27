@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 
 using R5T.Newport.Extensions;
 
-using NewportUtilities = R5T.Newport.Utilities;
+using NewportUtilities = R5T.Newport.Utilities;using R5T.T0064;
 
 
 namespace R5T.Norwich.Newport
-{
-    public class NewtonsoftJsonFileSerializer : IJsonFileSerializer
+{[ServiceImplementationMarker]
+    public class NewtonsoftJsonFileSerializer : IJsonFileSerializer,IServiceImplementation
     {
         public async Task<T> DeserializeAsync<T>(string jsonFilePath)
         {
